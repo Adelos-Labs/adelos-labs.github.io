@@ -1,0 +1,17 @@
+title: Adelos Labs
+description: Notes, experiments, and writeups.
+theme: jekyll-theme-hacker
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
