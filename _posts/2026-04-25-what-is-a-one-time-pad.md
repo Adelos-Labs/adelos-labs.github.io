@@ -4,9 +4,9 @@ title: What is a One-Time Pad?
 
 ## What is a one-time pad?
 
-Boardly speaking, a one-time pad is a way to encipher information that is neigh impossible to decipher unless you have a copy of the key with which it was enciphered (or unless those who are communicating make a mistake).
+Broadly speaking, a one-time pad is a way to encipher information that is nigh impossible to decipher unless you have a copy of the key with which it was enciphered (or unless those who are communicating make a mistake).
 
-Here's an example that illustrates the basic ideas. This example isn't [information-theoretic secure](https://en.wikipedia.org/wiki/Information-theoretic_security) nor is it how [Adelos-Labs/one-and-done](https://github.com/Adelos-Labs/one-and-done) works, but it gets the idea of a one-time-pad across.
+Here's an example that illustrates the basic ideas. This example isn't [information-theoretic secure](https://en.wikipedia.org/wiki/Information-theoretic_security) nor is it how [Adelos-Labs/one-and-done](https://github.com/Adelos-Labs/one-and-done) works, but it gets the idea of a one-time pad across.
 
 The basic idea is this:
 
@@ -22,7 +22,6 @@ To encipher and decipher, you can use modular arithmetic like this:
 In python code, enciphering a message (`HELLO`) looks like:
 
 ```python
-# Todo: make this more of a function
 message = 'HELLO'
 key = 'XMCKL'
 enciphered_message = ''
@@ -51,7 +50,6 @@ You send your friend this message.
 On their end, they can decipher with:
 
 ```python
-# todo: make this a function to highlight the diff
 enciphered_message = 'EQNVZ'
 key = 'XMCKL'
 deciphered_message = ''
@@ -75,6 +73,6 @@ print(deciphered_message)
 
 So a one-time pad relies on a shared key and some reversible algorithm (e.g. modular arithmetic like we did here or XOR) to allow two people to secretly communicate.
 
-The term 'one-time' is relevant because once part of a key file is used to encipher a message, it should never be used again (it is for one-time use). This is an important security requirement we'll dive into more in (neigh impossible)[/posts/2026-04-30-information-theoretic-security].
+The term 'one-time' is relevant because once part of a key file is used to encipher a message, it should never be used again (it is for one-time use). This is an important security requirement we'll dive into more in [a post on Information-Theoretic security](/posts/2026-04-30-information-theoretic-security).
 
 Happy ciphering!
