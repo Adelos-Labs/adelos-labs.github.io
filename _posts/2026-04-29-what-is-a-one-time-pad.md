@@ -1,12 +1,13 @@
 ---
 title: What is a One-Time Pad?
+author: Floyd
 ---
 
 ## What is a one-time pad?
 
-Broadly speaking, a one-time pad is a way to encipher information that is nigh impossible to decipher unless you have a copy of the key with which it was enciphered (or unless those who are communicating make a mistake).
+Broadly speaking, a one-time pad is a way to encipher information that is impossible to decipher from the ciphertext alone when [certain criteria]({% post_url 2026-05-04-information-theoretic-security %}) are met.
 
-Here's an example that illustrates the basic ideas. This example isn't [information-theoretic secure](https://en.wikipedia.org/wiki/Information-theoretic_security) nor is it how [Adelos-Labs/one-and-done](https://github.com/Adelos-Labs/one-and-done) works, but it gets the idea of a one-time pad across.
+Here's an example that illustrates the basic ideas. This example isn't how [Adelos-Labs/one-and-done](https://github.com/Adelos-Labs/one-and-done) works, but it gets the idea of a one-time pad across.
 
 The basic idea is this:
 
@@ -71,8 +72,8 @@ for index, enciphered_message_character in enumerate(enciphered_message):
 print(deciphered_message)
 ```
 
-So a one-time pad relies on a shared key and some reversible algorithm (e.g. modular arithmetic like we did here or XOR) to allow two people to secretly communicate.
+So a one-time pad relies on a shared secret key and a reversible operation, such as modular addition (what we did here) or XOR, that combines each plaintext symbol with its own independent random key symbol.
 
-The term 'one-time' is relevant because once part of a key file is used to encipher a message, it should never be used again (it is for one-time use). This is an important security requirement we'll dive into more in [a post on Information-Theoretic security](/posts/2026-04-30-information-theoretic-security).
+The term 'one-time' is relevant because once part of a key file is used to encipher a message, it should never be used again (it is for one-time use). This is an important security requirement we'll dive into more in [a post on Information-Theoretic security]({% post_url 2026-05-04-information-theoretic-security %}).
 
 Happy ciphering!
