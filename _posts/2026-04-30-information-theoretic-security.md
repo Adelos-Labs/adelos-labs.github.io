@@ -36,7 +36,7 @@ Seeing the ciphertext doesn't give the attacker any new information, so it doesn
 
 ## How is it Achieved?
 
-One way to achieve information-theoretic security is to use a [one-time pad]({% post_url 2026-05-02-what-is-a-one-time-pad %}). To be information-theoretically secure, a one-time pad's key must be:
+One way to achieve information-theoretic security is to use a [one-time pad]({% post_url 2026-04-29-what-is-a-one-time-pad %}). To be information-theoretically secure, a one-time pad's key must be:
 
 1. Truly random
 2. At least as long as the message (no repeating the key)

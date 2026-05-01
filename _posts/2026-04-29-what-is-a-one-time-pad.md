@@ -5,7 +5,7 @@ author: Floyd
 
 ## What is a one-time pad?
 
-Broadly speaking, a one-time pad is a way to encipher information that is impossible to decipher from the ciphertext alone when [certain criteria]({% post_url 2026-05-04-information-theoretic-security %}) are met.
+Broadly speaking, a one-time pad is a way to encipher information that is impossible to decipher from the ciphertext alone when [certain criteria]({% post_url 2026-04-30-information-theoretic-security %}) are met.
 
 Here's an example that illustrates the basic ideas. This example isn't how [Adelos-Labs/one-and-done](https://github.com/Adelos-Labs/one-and-done) works, but it gets the idea of a one-time pad across.
 
@@ -74,6 +74,6 @@ print(deciphered_message)
 
 So a one-time pad relies on a shared secret key and a reversible operation, such as modular addition (what we did here) or XOR, that combines each plaintext symbol with its own independent random key symbol.
 
-The term 'one-time' is relevant because once part of a key file is used to encipher a message, it should never be used again (it is for one-time use). This is an important security requirement we'll dive into more in [a post on Information-Theoretic security]({% post_url 2026-05-04-information-theoretic-security %}).
+The term 'one-time' is relevant because once part of a key file is used to encipher a message, it should never be used again (it is for one-time use). This is an important security requirement we'll dive into more in [a post on Information-Theoretic security]({% post_url 2026-04-30-information-theoretic-security %}).
 
 Happy ciphering!
